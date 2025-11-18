@@ -31,7 +31,7 @@ public class TempHumiDataControl{
                     TempHumiDataSensor.SensorData data = response.body();
                     String today = new SimpleDateFormat("yyyy-mm-dd", Locale.getDefault())
                             .format(new Date());
-
+                    Log.d("Sensor","[C Temp]:"+data.tempC+", [Humi]:"+data.humidPer+", [F Temp]:"+data.tempF+", [today]:"+data.datetime);
                     data.today = today;
 
                     callback.onSuccess(data);

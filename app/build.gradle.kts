@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.temp_humi_sensor"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.temp_humi_sensor"
