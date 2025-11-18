@@ -1,19 +1,18 @@
 package com.example.temp_humi_sensor;
 
 import android.util.Log;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import android.widget.TextView;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import java.util.Calendar;
 
 public class TempHumiDataControl{
     private TempHumiDataSensor api;
+    TextView DateText;
     public TempHumiDataControl() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://112.172.235.137:42949/")
@@ -29,10 +28,19 @@ public class TempHumiDataControl{
             public void onResponse(Call<TempHumiDataSensor.SensorData> call, Response<TempHumiDataSensor.SensorData> response) {
                 if(response.isSuccessful()){
                     TempHumiDataSensor.SensorData data = response.body();
-                    String today = new SimpleDateFormat("yyyy-mm-dd", Locale.getDefault())
-                            .format(new Date());
-                    Log.d("Sensor","[C Temp]:"+data.tempC+", [Humi]:"+data.humidPer+", [F Temp]:"+data.tempF+", [today]:"+data.datetime);
-                    data.today = today;
+
+                    Calendar cal = Calendar.getInstance();
+                    int year = cal.get(Calendar.YEAR);
+                    int month = cal.get(Calendar.MONTH) + 1;
+                    int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                    String formatted = String.format("%04d-%02d-%02d", year, month, day);
+                    data.today = formatted;
+
+                    Log.d("Sensor","[C Temp]:"+data.tempC +
+                            ", [Humi]:"+data.humidPer +
+                            ", [F Temp]:"+data.tempF +
+                            ", [today]:"+data.datetime);
 
                     callback.onSuccess(data);
                 }else{

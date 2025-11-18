@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity{
                 @Override
                 public void onSuccess(TempHumiDataSensor.SensorData data) {
 
-                    Temptext.setText(data.tempC);
-                    HumiText.setText(data.humidPer);
-                    FTemptext.setText(data.tempF);
+                    Temptext.setText(data.tempC+" °C");
+                    HumiText.setText(data.humidPer+" %");
+                    FTemptext.setText(data.tempF+" °F");
                     DateText.setText(data.datetime);
                     ToDayText.setText(data.today);
                 }
@@ -61,14 +61,12 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onResume() {
         super.onResume();
-        // 화면이 보일 때부터 2초 반복 시작
         handler.post(refreshTask);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        // 다른 화면으로 나가면 반복 중지 (메모리 낭비 방지)
         handler.removeCallbacks(refreshTask);
     }
 }

@@ -26,15 +26,15 @@
             android:id="@+id/box_view"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:gravity="center_vertical"
             android:layout_columnWeight="2"
-            android:orientation="vertical"
-            android:paddingTop="80dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="온습도 측정"
-                android:textSize="50sp"
+                android:textSize="45sp"
                 android:textColor="@color/white"/>
 
             <TextView
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/Sun"/>
+            android:src="@drawable/sun"/>
     </GridLayout>
 
     <GridLayout
@@ -81,23 +81,33 @@
             android:background="@drawable/botder"
             android:orientation="vertical"
             android:elevation="3dp"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:gravity="center">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:src="@drawable/Temp"/>
+                android:src="@drawable/temp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/Brown"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="화씨"/>
 
             <TextView
                 android:id="@+id/FTempText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="화씨"
+                android:text="00.00 °F"
                 android:textColor="@color/Brown"
                 android:textStyle="bold"
-                android:textSize="25sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -110,21 +120,31 @@
             android:background="@drawable/botder"
             android:elevation="3dp"
             android:padding="10dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:gravity="center">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:src="@drawable/Humi" />
+                android:src="@drawable/humi" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/Brown"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="습도"/>
 
             <TextView
                 android:id="@+id/HumiText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="습도"
-                android:textSize="25sp"
+                android:text="00.00 %"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/Brown"/>
         </LinearLayout>
@@ -138,21 +158,32 @@
             android:background="@drawable/botder"
             android:elevation="3dp"
             android:padding="10dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:gravity="center">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:src="@drawable/Search"/>
+                android:src="@drawable/search"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/Brown"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="온습도 측정 시간"/>
 
             <TextView
                 android:id="@+id/DateText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="수집 시간"
-                android:textSize="25sp"
+                android:gravity="center"
+                android:text="YY-MM-DD-TT-MM-SS"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/Brown"/>
         </LinearLayout>
@@ -166,21 +197,31 @@
             android:background="@drawable/botder"
             android:elevation="3dp"
             android:padding="10dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:gravity="center">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:src="@drawable/Time"/>
+                android:src="@drawable/time"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/Brown"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="현재 시간"/>
 
             <TextView
                 android:id="@+id/ToDay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="현재 시간"
-                android:textSize="25sp"
+                android:text="YY-MM-DD"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/Brown"/>
         </LinearLayout>
