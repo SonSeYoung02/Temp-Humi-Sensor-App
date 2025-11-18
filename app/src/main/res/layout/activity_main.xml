@@ -40,15 +40,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="지금 집의 온도는?"
-                android:textSize="30sp"
+                android:text="지금 우리집 온도는?"
+                android:textSize="28sp"
                 android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/TempText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Temp C"
+                android:text="00.00 °C"
                 android:textSize="60sp"
                 android:textStyle="bold"
                 android:textColor="@color/Brown"/>
@@ -213,7 +213,7 @@
                 android:textColor="@color/Brown"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:text="현재 시간"/>
+                android:text="오늘 날짜"/>
 
             <TextView
                 android:id="@+id/ToDay"

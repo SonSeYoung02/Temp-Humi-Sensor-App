@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.TempHumiSensor" parent="Base.Theme.TempHumiSensor" />
+
 </resources>
