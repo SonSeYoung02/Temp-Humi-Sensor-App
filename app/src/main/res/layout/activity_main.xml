@@ -87,7 +87,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:src="@drawable/Temp" />
+                android:src="@drawable/Temp"/>
 
             <TextView
                 android:id="@+id/FTempText"
