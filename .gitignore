@@ -1,0 +1,10 @@
+*.iml
+.gradle/
+build/
+.idea/
+.DS_Store
+.externalNativeBuild
+.cxx
+local.properties
+*.log
+app/google-services.json
